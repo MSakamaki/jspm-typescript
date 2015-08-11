@@ -4,7 +4,7 @@
   "description": "jspm typescript sample",
   "main": "none",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "xo"
   },
   "author": "",
   "license": "MIT",
@@ -24,6 +24,7 @@
     "browser-sync": "^2.8.2",
     "del": "^1.2.0",
     "gulp": "^3.9.0",
+    "gulp-debug": "^2.1.0",
     "gulp-description": "0.0.4",
     "gulp-eslint": "^1.0.0",
     "gulp-load-plugins": "^1.0.0-rc.1",
@@ -32,6 +33,7 @@
     "http-server": "^0.8.0",
     "open": "0.0.5",
     "require-dir": "^0.3.0",
-    "typescript": "^1.5.3"
+    "typescript": "^1.5.3",
+    "xo": "^0.5.2"
   }
 }

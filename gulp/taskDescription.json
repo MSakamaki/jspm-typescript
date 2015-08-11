@@ -2,6 +2,7 @@
   "main":[
     "default",
     "help",
+    "h:list",
     "serve"
   ],
   "description":{
@@ -9,7 +10,9 @@
     "default" : "ライブリロード開発を開始します",
     "help": "gulpコマンドのヘルプを表示します",
     "h:list" : "すべてのコマンドを表示します",
-    "lint" : "アプリ、gulp、テストコードのjshintチェックを行います",
+    "h:dep":"gulpの依存関係を表示します",
+    "eslint" : "gulp、テストコードのeshintチェックを行います",
+    "tslint" : "アプリのtshintチェックを行います",
     "serve" : "ライブリロード開発を開始します"
   }
 }

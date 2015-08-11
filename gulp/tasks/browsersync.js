@@ -25,5 +25,6 @@
         browser: ['google chrome'],
         tunnel: false
       });
+    gulp.watch(config.app.ts, ['tslint']);
   });
 })();

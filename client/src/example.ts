@@ -1,13 +1,11 @@
-import repeat from "core-js/library/fn/string/repeat"
+import repeat from "core-js/library/fn/string/repeat";
 
-export class Example
-{
+export class Example {
     element: HTMLElement;
     span: HTMLElement;
     timerToken: number;
 
-    constructor (element: HTMLElement)
-    {
+    constructor (element: HTMLElement) {
         this.element = element;
         this.element.innerText += "The time is: ";
         this.span = document.createElement('span');
@@ -15,13 +13,11 @@ export class Example
         this.span.innerText = new Date().toUTCString();
     }
 
-    start()
-    {
+    start() {
         this.timerToken = setInterval(() => this.span.innerText =  `"${repeat(new Date().toUTCString() + " ", 2)}"`, 500);
     }
 
-    stop()
-    {
+    stop() {
         clearTimeout(this.timerToken);
     }
 }
