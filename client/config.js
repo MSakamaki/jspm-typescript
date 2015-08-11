@@ -1,44 +1,23 @@
 System.config({
-  "baseURL": ".",
-  "transpiler": "typescript",
-  "paths": {
-    "github:*": "jspm_packages/github/*.js",
-    "npm:*": "jspm_packages/npm/*.js",
-    "app": "app",
-    "*": "*.js"
+  baseURL: "/",
+  defaultJSExtensions: true,
+  transpiler: "typescript",
+  paths: {
+    "*": "src/*",
+    "src": "src",
+    "github:*": "jspm_packages/github/*",
+    "npm:*": "jspm_packages/npm/*"
   },
-  "defaultJSExtensions": true,
-  "typescriptOptions": {
-    "noImplicitAny": false,
-    "typeCheck": true
-  },
-  "packages": {
-    "app": {
-      "main": "main",
-      "defaultExtension": "ts",
-      "meta": {
-        "*.ts": {
-          "loader": "ts"
-        },
-        "*.css": {
-          "loader": "css"
-        }
-      }
-    }
-  }
-});
 
-System.config({
-  "map": {
-    "babel": "npm:babel-core@5.8.22",
-    "babel-runtime": "npm:babel-runtime@5.8.20",
+  packages: {
+    "src": {
+      "defaultExtension": "ts"
+    }
+  },
+
+  map: {
     "core-js": "npm:core-js@0.9.18",
-    "css": "github:systemjs/plugin-css@0.1.13",
-    "ts": "github:frankwallis/plugin-typescript@2.0.4",
     "typescript": "npm:typescript@1.5.3",
-    "github:frankwallis/plugin-typescript@2.0.4": {
-      "typescript": "npm:typescript@1.5.3"
-    },
     "github:jspm/nodelibs-buffer@0.1.0": {
       "buffer": "npm:buffer@3.4.1"
     },
@@ -50,9 +29,6 @@ System.config({
     },
     "github:jspm/nodelibs-process@0.1.1": {
       "process": "npm:process@0.10.1"
-    },
-    "npm:babel-runtime@5.8.20": {
-      "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:buffer@3.4.1": {
       "base64-js": "npm:base64-js@0.0.8",
@@ -81,4 +57,3 @@ System.config({
     }
   }
 });
-
