@@ -1,0 +1,32 @@
+{
+  "name": "jspm-typescript",
+  "version": "0.0.1",
+  "description": "jspm typescript sample",
+  "main": "",
+  "scripts": {
+    "test": ""
+  },
+  "author": "",
+  "license": "MIT",
+  "jspm": {
+    "directories": {},
+    "dependencies": {
+      "core-js": "npm:core-js@^0.9.4"
+    },
+    "devDependencies": {
+      "typescript": "npm:typescript"
+    }
+  },
+  "devDependencies": {
+    "browser-sync": "^2.8.2",
+    "gulp": "^3.9.0",
+    "gulp-description": "0.0.4",
+    "gulp-eslint": "^1.0.0",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-tslint": "^3.1.2",
+    "http-server": "^0.8.0",
+    "open": "0.0.5",
+    "require-dir": "^0.3.0",
+    "typescript": "^1.5.3"
+  }
+}
