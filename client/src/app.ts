@@ -1,6 +1,6 @@
-import { Greeter } from 'greeter'
+import { Example } from 'example'
 
 export function main(el: HTMLElement): void {
-    let greeter = new Greeter(el);
-    greeter.start();
+    let exp = new Example(el);
+    exp.start();
 }

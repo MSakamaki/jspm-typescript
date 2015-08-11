@@ -1,0 +1,15 @@
+{
+  "main":[
+    "default",
+    "help",
+    "serve"
+  ],
+  "description":{
+    "browser-sync" : "browser-sync(クライアント開発用)を起動します",
+    "default" : "ライブリロード開発を開始します",
+    "help": "gulpコマンドのヘルプを表示します",
+    "h:list" : "すべてのコマンドを表示します",
+    "lint" : "アプリ、gulp、テストコードのjshintチェックを行います",
+    "serve" : "ライブリロード開発を開始します"
+  }
+}
