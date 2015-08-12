@@ -10,6 +10,14 @@ cd jspm-typescript
 npm install
 jspm install
 
+# server api install
+cd server
+jspm install
+cd ../
+
+# start develop
+gulp
+
 # enjoy!
 ```
 
