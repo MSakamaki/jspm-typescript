@@ -5,8 +5,8 @@ var gulp = require('gulp');
 
 gulp.task('serve', [
   'tslint',
-  'browser-sync'
-  //'express:dev'
+  'browser-sync',
+  'express:dev'
 ]);
 
 // Don't use process.exit(); throw an error instead

@@ -16,7 +16,7 @@
         server: {
           baseDir: ['./client']
         },
-        port: 9000,
+        port: config.port.view,
         ui: {
           port: 3000,
           weinre: {port: 3050 }

@@ -13,4 +13,23 @@ jspm install
 # enjoy!
 ```
 
+### add server api
 
+```sh
+# ex) express jspm install
+cd server
+jspm install npm:express
+cd ../
+```
+
+### Development Tasks
+
+```sh
+gulp help
+```
+
+
+### 使ってみたい
+
+ + [vantagejs](https://github.com/vantagejs)
+ + [xoxo](https://github.com/sindresorhus/xo)
