@@ -6,7 +6,6 @@ import http from 'http';
 
 //import Sample from 'api/sample';
 import {Sample} from 'api/sample';
-console.log('api', Sample)
 
 export class App{
   constructor(/* argment */){

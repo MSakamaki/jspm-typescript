@@ -7,6 +7,7 @@ export class Example {
 
     constructor (element: HTMLElement) {
         this.element = element;
+        Main.defaultProps = { users: ['Local of Taro', 'Local of Hanako'] };
         this.main = React.createElement(Main);
     }
 

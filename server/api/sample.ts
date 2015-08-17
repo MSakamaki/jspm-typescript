@@ -3,7 +3,12 @@
  */
 class ApiController{
   get(req, res):void{
-    res.json({hello:'world'});
+    setTimeout(()=>{
+      res.json({
+        hello:'world',
+        users: ['Alice','Bob','Carol']
+      });
+    }, 1000);
   }
   put(req, res):void{
     var id = req.params.id;

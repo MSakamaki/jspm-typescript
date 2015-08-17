@@ -21,6 +21,7 @@ System.config({
     "jsx": "github:floatdrop/plugin-jsx@1.1.0",
     "react": "npm:react@0.13.3",
     "typescript": "npm:typescript@1.5.3",
+    "whatwg-fetch": "npm:whatwg-fetch@0.9.0",
     "github:floatdrop/plugin-jsx@1.1.0": {
       "react-tools": "npm:react-tools@0.13.3"
     },
