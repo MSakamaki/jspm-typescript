@@ -10,6 +10,7 @@ var config = require('../gulp.config');
 gulp.task('express:dev', function(){
   nodemon({
     script: './server/index.js',
+    ext: 'ts',
     env: {
       // just: outer file
       'PORT': config.port.api,

@@ -5,9 +5,9 @@
     System: {
       transpiler: 'typescript'
     },
-    port:{
+    port: {
       view: 9000,
-      api:  9001
+      api: 9001
     },
     app: {
       src: 'client/src/**/*',

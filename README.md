@@ -41,6 +41,39 @@ cd ../
 gulp help
 ```
 
+### vantage
+
+```sh
+vantage 9002
+
+> jspm-ts~$
+
+> jspm-ts~$ help
+
+# sample command
+
+api sample
+  -t --timeout api timeout setting
+  -r --xhrcode api responce code
+
+> jspm-ts~$ api sample -t 2000
+> jspm-ts~$ exit # ( or Ctrl + C )
+> $ curl --dump-header - http://localhost:9001/api/sample
+# waiting 2 second
+HTTP/1.1 200 OK
+X-Powered-By: Express
+...
+
+> jspm-ts~$ api sample -r 404
+> jspm-ts~$ exit # ( or Ctrl + C )
+> $ curl --dump-header - http://localhost:9001/api/sample
+
+HTTP/1.1 404 Not Found
+X-Powered-By: Express
+...
+
+```
+
 
 ### 参考
 
@@ -50,4 +83,8 @@ gulp help
 ### 使ってみたい
 
  + [vantagejs](https://github.com/vantagejs)
+   + mock controller
  + [xoxo](https://github.com/sindresorhus/xo)
+ + [rxjs](https://github.com/Reactive-Extensions/RxJS)
+
+

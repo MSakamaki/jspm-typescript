@@ -2,6 +2,8 @@
 var System = require('systemjs');
 var path   = require('path');
 var config = require('./config');
+global.vantage = require('vantage')();
+
 
 // loads './app.ts' from the current directory
 System.import('app').then(function(modules) {
@@ -11,6 +13,12 @@ System.import('app').then(function(modules) {
 	//var app = new modules.App(viewPath);
 	var app = new modules.App();
 	app.listen();
+
+    // vantageJS listen
+    vantage
+      .delimiter("jspm-ts~$")
+      .listen(9002)
+      .show();
 }).catch(function(err){
 	console.log('error',err);
 });
