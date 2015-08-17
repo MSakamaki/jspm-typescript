@@ -44,10 +44,9 @@ gulp help
 ### vantage
 
 ```sh
-vantage 9002
-
+# vantage connect
+> $ vantage 9002
 > jspm-ts~$
-
 > jspm-ts~$ help
 
 # sample command
@@ -56,6 +55,7 @@ api sample
   -t --timeout api timeout setting
   -r --xhrcode api responce code
 
+# responce time controle
 > jspm-ts~$ api sample -t 2000
 > jspm-ts~$ exit # ( or Ctrl + C )
 > $ curl --dump-header - http://localhost:9001/api/sample
@@ -64,6 +64,7 @@ HTTP/1.1 200 OK
 X-Powered-By: Express
 ...
 
+# responce code controle
 > jspm-ts~$ api sample -r 404
 > jspm-ts~$ exit # ( or Ctrl + C )
 > $ curl --dump-header - http://localhost:9001/api/sample

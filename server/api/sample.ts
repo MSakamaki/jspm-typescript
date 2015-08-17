@@ -14,7 +14,7 @@ module Api {
 
       // vantage controller
       vantage.command(`api ${apiName}`)
-         .description("mode api controller")
+         .description(`api/${apiName} controller`)
          .option('-t, --timeout', 'api call time')
          .option('-r, --xhrcode', 'XMLHttpRequest Code [ 200 or null true, others error codes ]')
          .action(function(args, callback) {
