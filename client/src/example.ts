@@ -1,23 +1,16 @@
-import repeat from "core-js/library/fn/string/repeat";
+import React from 'react';
+import Main from './main.jsx!';
 
 export class Example {
     element: HTMLElement;
-    span: HTMLElement;
-    timerToken: number;
+    main: HTMLElement;
 
     constructor (element: HTMLElement) {
         this.element = element;
-        this.element.innerText += "The time is: ";
-        this.span = document.createElement('span');
-        this.element.appendChild(this.span);
-        this.span.innerText = new Date().toUTCString();
+        this.main = React.createElement(Main);
     }
 
-    start() {
-        this.timerToken = setInterval(() => this.span.innerText =  `"${repeat(new Date().toUTCString() + " ", 2)}"`, 500);
-    }
-
-    stop() {
-        clearTimeout(this.timerToken);
+    render() {
+        React.render(this.main, this.element);
     }
 }

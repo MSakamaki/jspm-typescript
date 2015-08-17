@@ -9,6 +9,7 @@ git clone https://github.com/MSakamaki/jspm-typescript.git
 cd jspm-typescript
 npm install
 jspm install
+jspm install npm:iconv-lite -o "{ 'map': {'./extend-node': 'extend-node', './streams': 'streams'}}"
 
 # server api install
 cd server
@@ -36,6 +37,10 @@ cd ../
 gulp help
 ```
 
+
+### 参考
+
+ + [Typescript + JSX](http://blog.mgechev.com/2015/07/05/using-jsx-react-with-typescript/)
 
 ### 使ってみたい
 
