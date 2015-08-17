@@ -7,7 +7,8 @@
   var config = require('../gulp.config');
 
   var defaultSyncFile = [
-      config.app.ts
+      config.app.ts,
+      config.app.jsx
     ];
 
   gulp.task('browser-sync', function() {

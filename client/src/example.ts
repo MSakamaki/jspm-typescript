@@ -1,5 +1,5 @@
 import React from 'react';
-import Main from './main.jsx!';
+import Main from './components/main.jsx!';
 
 export class Example {
     element: HTMLElement;
