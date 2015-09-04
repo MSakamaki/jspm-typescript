@@ -8,11 +8,32 @@
   },
   "dependencies": {
     "body-parser": "npm:body-parser@^1.13.3",
+    "buffer": "github:jspm/nodelibs-buffer@^0.1.0",
     "express": "npm:express@^4.13.3",
+    "fs": "github:jspm/nodelibs-fs@^0.1.2",
     "http": "github:jspm/nodelibs-http@^1.7.1",
-    "ts": "github:frankwallis/plugin-typescript@^2.0.4"
+    "iconv-lite": "npm:iconv-lite@^0.4.11",
+    "os": "github:jspm/nodelibs-os@^0.1.0",
+    "path": "github:jspm/nodelibs-path@^0.1.0",
+    "ts": "github:frankwallis/plugin-typescript@^2.0.11"
   },
   "devDependencies": {
-    "typescript": "npm:typescript@^1.5.3"
+    "typescript": "npm:typescript@1.7.0-dev.20150903"
+  },
+  "overrides": {
+    "npm:typescript@1.7.0-dev.20150903": {
+      "map": {
+        "fs": "fs",
+        "path": "path",
+        "os": "os",
+        "buffer": "buffer"
+      }
+    },
+    "npm:iconv-lite@0.4.11": {
+      "map": {
+        "./extend-node": "./lib/extend-node",
+        "./streams": "./lib/streams"
+      }
+    }
   }
 }

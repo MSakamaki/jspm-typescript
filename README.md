@@ -13,11 +13,18 @@ npm install
 
 # client develop install
 jspm install
-jspm install npm:iconv-lite -o "{ 'map': {'./extend-node': 'extend-node', './streams': 'streams'}}"
+jspm i npm:iconv-lite -o "{ 'map': {'./extend-node': './lib/extend-node', './streams': './lib/streams'}}"
+
 
 # server api install
 cd server
 jspm install
+
+# Typescript version is appropriate, using a latest update
+jspm i npm:typescript@1.7.0-dev.20150903 -o "{ 'map': {'fs': 'fs', 'path': 'path', 'os': 'os', 'buffer': 'buffer'}}"
+jspm i npm:iconv-lite -o "{ 'map': {'./extend-node': './lib/extend-node', './streams': './lib/streams'}}"
+
+
 cd ../
 
 # start develop

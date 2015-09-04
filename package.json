@@ -17,16 +17,17 @@
       "iconv-lite": "npm:iconv-lite@^0.4.11",
       "jsx": "github:floatdrop/plugin-jsx@^1.1.0",
       "react": "npm:react@^0.13.3",
+      "ts": "github:frankwallis/plugin-typescript@^2.0.11",
       "whatwg-fetch": "npm:whatwg-fetch@^0.9.0"
     },
     "devDependencies": {
-      "typescript": "npm:typescript"
+      "typescript": "npm:typescript@^1.7.0-dev.20150901"
     },
     "overrides": {
       "npm:iconv-lite@0.4.11": {
         "map": {
-          "./extend-node": "extend-node",
-          "./streams": "streams"
+          "./extend-node": "./lib/extend-node",
+          "./streams": "./lib/streams"
         }
       }
     }
@@ -47,7 +48,7 @@
     "open": "0.0.5",
     "require-dir": "^0.3.0",
     "systemjs": "^0.18.9",
-    "typescript": "^1.5.3",
+    "typescript": "^1.7.0-dev.20150901",
     "vantage": "^1.3.5",
     "xo": "^0.5.2"
   }

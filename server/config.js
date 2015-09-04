@@ -3,11 +3,11 @@ System.config({
   defaultJSExtensions: true,
   transpiler: "typescript",
   typescriptOptions: {
-    "noImplicitAny": true
+    "noImplicitAny": false,
+    "typeCheck": true
   },
   paths: {
     "app": "app",
-    "api:": "api/*",
     "github:*": "jspm_server_modules/github/*",
     "npm:*": "jspm_server_modules/npm/*"
   },
@@ -33,18 +33,23 @@ System.config({
 
   map: {
     "body-parser": "npm:body-parser@1.13.3",
+    "buffer": "github:jspm/nodelibs-buffer@0.1.0",
     "express": "npm:express@4.13.3",
+    "fs": "github:jspm/nodelibs-fs@0.1.2",
     "http": "github:jspm/nodelibs-http@1.7.1",
-    "ts": "github:frankwallis/plugin-typescript@2.0.4",
-    "typescript": "npm:typescript@1.5.3",
-    "github:frankwallis/plugin-typescript@2.0.4": {
-      "typescript": "npm:typescript@1.5.3"
+    "iconv-lite": "npm:iconv-lite@0.4.11",
+    "os": "github:jspm/nodelibs-os@0.1.0",
+    "path": "github:jspm/nodelibs-path@0.1.0",
+    "ts": "github:frankwallis/plugin-typescript@2.0.11",
+    "typescript": "npm:typescript@1.7.0-dev.20150903",
+    "github:frankwallis/plugin-typescript@2.0.11": {
+      "typescript": "npm:typescript@1.7.0-dev.20150903"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
     "github:jspm/nodelibs-buffer@0.1.0": {
-      "buffer": "npm:buffer@3.4.1"
+      "buffer": "npm:buffer@3.4.3"
     },
     "github:jspm/nodelibs-constants@0.1.0": {
       "constants-browserify": "npm:constants-browserify@0.0.1"
@@ -110,7 +115,7 @@ System.config({
       "browserify-zlib": "npm:browserify-zlib@0.1.4"
     },
     "npm:accepts@1.2.12": {
-      "mime-types": "npm:mime-types@2.1.4",
+      "mime-types": "npm:mime-types@2.1.6",
       "negotiator": "npm:negotiator@0.5.3"
     },
     "npm:asn1.js@2.2.0": {
@@ -134,7 +139,7 @@ System.config({
       "on-finished": "npm:on-finished@2.3.0",
       "qs": "npm:qs@4.0.0",
       "raw-body": "npm:raw-body@2.1.2",
-      "type-is": "npm:type-is@1.6.6",
+      "type-is": "npm:type-is@1.6.7",
       "zlib": "github:jspm/nodelibs-zlib@0.1.0"
     },
     "npm:browserify-aes@1.0.3": {
@@ -178,7 +183,7 @@ System.config({
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
-    "npm:buffer@3.4.1": {
+    "npm:buffer@3.4.3": {
       "base64-js": "npm:base64-js@0.0.8",
       "ieee754": "npm:ieee754@1.1.6",
       "is-array": "npm:is-array@1.0.1"
@@ -252,7 +257,7 @@ System.config({
       "bn.js": "npm:bn.js@2.2.0",
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
-      "miller-rabin": "npm:miller-rabin@2.1.0",
+      "miller-rabin": "npm:miller-rabin@2.0.1",
       "randombytes": "npm:randombytes@2.0.1",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
@@ -299,7 +304,7 @@ System.config({
       "range-parser": "npm:range-parser@1.0.2",
       "send": "npm:send@0.13.0",
       "serve-static": "npm:serve-static@1.10.0",
-      "type-is": "npm:type-is@1.6.6",
+      "type-is": "npm:type-is@1.6.7",
       "utils-merge": "npm:utils-merge@1.0.0",
       "vary": "npm:vary@1.0.1"
     },
@@ -329,15 +334,18 @@ System.config({
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
-    "npm:miller-rabin@2.1.0": {
-      "bn.js": "npm:bn.js@3.1.1",
+    "npm:methods@1.1.1": {
+      "http": "github:jspm/nodelibs-http@1.7.1"
+    },
+    "npm:miller-rabin@2.0.1": {
+      "bn.js": "npm:bn.js@2.2.0",
       "brorand": "npm:brorand@1.0.5"
     },
-    "npm:mime-db@1.16.0": {
+    "npm:mime-db@1.18.0": {
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
-    "npm:mime-types@2.1.4": {
-      "mime-db": "npm:mime-db@1.16.0",
+    "npm:mime-types@2.1.6": {
+      "mime-db": "npm:mime-db@1.18.0",
       "path": "github:jspm/nodelibs-path@0.1.0"
     },
     "npm:mime@1.3.4": {
@@ -473,16 +481,12 @@ System.config({
     "npm:timers-browserify@1.4.1": {
       "process": "npm:process@0.11.1"
     },
-    "npm:type-is@1.6.6": {
+    "npm:type-is@1.6.7": {
       "media-typer": "npm:media-typer@0.3.0",
-      "mime-types": "npm:mime-types@2.1.4"
+      "mime-types": "npm:mime-types@2.1.6"
     },
-    "npm:typescript@1.5.3": {
-      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+    "npm:typescript@1.7.0-dev.20150903": {
       "child_process": "github:jspm/nodelibs-child_process@0.1.0",
-      "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "os": "github:jspm/nodelibs-os@0.1.0",
-      "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1",
       "readline": "github:jspm/nodelibs-readline@0.1.0"
     },
