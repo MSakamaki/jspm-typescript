@@ -11,7 +11,7 @@ export class App{
   constructor(/* argment */){
     this.config = {/* set argment */};
   }
-  
+
   listen(){
     console.log('start');
     var app = express();
@@ -27,10 +27,10 @@ export class App{
       res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
       next();
     });
-    
+
     // Api Start
     Sample(app);
-    
+
     // Start server
     server.listen(port,process.env.OPENSHIFT_NODEJS_IP || process.env.IP || undefined
       , function () {

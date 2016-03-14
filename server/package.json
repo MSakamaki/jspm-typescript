@@ -2,37 +2,72 @@
   "name": "jspm_typescript_server",
   "description": "Server側用のJSPM設定ファイル",
   "main": "index.js",
+  "peerDependencies": {
+    "assert": "github:jspm/nodelibs-assert@^0.2.0-alpha",
+    "buffer": "github:jspm/nodelibs-buffer@^0.2.0-alpha",
+    "child_process": "github:jspm/nodelibs-child_process@^0.2.0-alpha",
+    "constants": "github:jspm/nodelibs-constants@^0.2.0-alpha",
+    "crypto": "github:jspm/nodelibs-crypto@^0.2.0-alpha",
+    "events": "github:jspm/nodelibs-events@^0.2.0-alpha",
+    "fs": "github:jspm/nodelibs-fs@^0.2.0-alpha",
+    "http": "github:jspm/nodelibs-http@^0.2.0-alpha",
+    "net": "github:jspm/nodelibs-net@^0.2.0-alpha",
+    "os": "github:jspm/nodelibs-os@^0.2.0-alpha",
+    "path": "github:jspm/nodelibs-path@^0.2.0-alpha",
+    "process": "github:jspm/nodelibs-process@^0.2.0-alpha",
+    "querystring": "github:jspm/nodelibs-querystring@^0.2.0-alpha",
+    "readline": "github:jspm/nodelibs-readline@^0.2.0-alpha",
+    "stream": "github:jspm/nodelibs-stream@^0.2.0-alpha",
+    "string_decoder": "github:jspm/nodelibs-string_decoder@^0.2.0-alpha",
+    "timers": "github:jspm/nodelibs-timers@^0.2.0-alpha",
+    "tty": "github:jspm/nodelibs-tty@^0.1.0",
+    "url": "github:jspm/nodelibs-url@^0.2.0-alpha",
+    "util": "github:jspm/nodelibs-util@^0.2.0-alpha",
+    "vm": "github:jspm/nodelibs-vm@^0.2.0-alpha",
+    "zlib": "github:jspm/nodelibs-zlib@^0.2.0-alpha"
+  },
   "jspm": true,
   "directories": {
     "packages": "jspm_server_modules"
   },
   "dependencies": {
-    "body-parser": "npm:body-parser@^1.13.3",
-    "buffer": "github:jspm/nodelibs-buffer@^0.1.0",
-    "express": "npm:express@^4.13.3",
-    "fs": "github:jspm/nodelibs-fs@^0.1.2",
-    "http": "github:jspm/nodelibs-http@^1.7.1",
+    "body-parser": "npm:body-parser@^1.15.0",
+    "express": "npm:express@^4.13.4",
     "iconv-lite": "npm:iconv-lite@^0.4.11",
-    "os": "github:jspm/nodelibs-os@^0.1.0",
-    "path": "github:jspm/nodelibs-path@^0.1.0",
-    "ts": "github:frankwallis/plugin-typescript@^2.0.11"
+    "nodelibs": "github:jspm/nodelibs@^0.1.9",
+    "nodelibs-http": "github:jspm/nodelibs-http@^1.7.1",
+    "nodelibs-path": "github:jspm/nodelibs-path@^0.1.0",
+    "ts": "github:frankwallis/plugin-typescript@^4.0.2",
+    "typescript": "npm:typescript@^1.8.7"
   },
   "devDependencies": {
-    "typescript": "npm:typescript@1.7.0-dev.20150903"
+    "plugin-typescript": "github:frankwallis/plugin-typescript@^4.0.2"
   },
   "overrides": {
-    "npm:typescript@1.7.0-dev.20150903": {
+    "npm:browserify-zlib@0.1.4": {
+      "dependencies": {
+        "readable-stream": "^2.0.2",
+        "pako": "~0.2.0"
+      },
       "map": {
-        "fs": "fs",
-        "path": "path",
-        "os": "os",
-        "buffer": "buffer"
+        "_stream_transform": "readable-stream/transform"
       }
     },
-    "npm:iconv-lite@0.4.11": {
+    "npm:inherits@2.0.1": {
+      "ignore": [
+        "test.js"
+      ]
+    },
+    "npm:typescript@1.8.7": {
+      "browser": {},
       "map": {
-        "./extend-node": "./lib/extend-node",
-        "./streams": "./lib/streams"
+        "buffer": "@empty",
+        "child_process": "@empty",
+        "fs": "@empty",
+        "os": "@empty",
+        "path": "@empty",
+        "process": "@empty",
+        "readline": "@empty"
       }
     }
   }

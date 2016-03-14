@@ -1,7 +1,8 @@
 /// <reference path="../../typings/node/node.d.ts"/>
 var System = require('systemjs');
 var path   = require('path');
-var config = require('./config');
+var config = require('./jspm.browser');
+var config = require('./jspm.config');
 global.vantage = require('vantage')();
 
 // loads './app.ts' from the current directory
